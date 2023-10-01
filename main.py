@@ -7,7 +7,7 @@ for x in conp.SumayaAcademyapk.youtubeurl.find():
     urll = conp.SumayaAcademyapk.youtubeurl.find_one({"sno": x['sno']}, {'url': 1 , '_id': 0})
     oldurl = urll['url']
 
-    os.system(f"yt-dlp --get-url -f 18 {oldurl} >> vurl.txt")
+    os.system(f"yt-dlp --get-url -f 22 {oldurl} >> vurl.txt")
     with open('vurl.txt') as f:
         newurl = f.read()
     os.system("rm vurl.txt")
