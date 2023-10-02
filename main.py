@@ -33,24 +33,41 @@ def statt():
                     newurl = f.read()
                 os.system("rm vurl.txt")
                 conp.attack.sumayaacademy.update_one({"sr": x['sno']}, {'$set': {"vurl": newurl}})
-            print("done")
-            time.sleep(18000)
-            print("start Again")
+                print("done")
+                time.sleep(18000)
+                print("start Again")
 
     def startserver():
         while True:
             print("Sumaya Server Start")
             requests.get("https://sumayaacademy.onrender.com/")
             time.sleep(780)
+    def video():
+        while True:
+            requests.get("https://autourl-3ptn.onrender.com/")
+            time.sleep(300)
+
+    def printt():
+        while True:
+            print("working")
+            time.sleep(5)
+            
+            
+            
 
 
 
 
     t1 = threading.Thread(target=videourl)
     t2 = threading.Thread(target=startserver)
+    
+    t3 = threading.Thread(target=video)
+    t4 = threading.Thread(target=printt)
 
     t1.start()
     t2.start()
+    t3.start()
+    t4.start()
 @kalwar.get("/", response_class=PlainTextResponse)
 async def verif(background_tasks: BackgroundTasks):
    background_tasks.add_task(statt)
