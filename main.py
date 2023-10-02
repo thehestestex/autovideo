@@ -39,6 +39,7 @@ def statt():
 
     def startserver():
         while True:
+            print("Sumaya Server Start")
             requests.get("https://sumayaacademy.onrender.com/")
             time.sleep(780)
 
