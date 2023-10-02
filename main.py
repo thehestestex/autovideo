@@ -23,7 +23,9 @@ kalwar = FastAPI(docs_url=None, redoc_url=None, openapi_url=None)
 def statt():
     def videourl():
         while True:
+            print("Upon here")
             for x in conp.SumayaAcademyapk.youtubeurl.find():
+                print("here")
                 urll = conp.SumayaAcademyapk.youtubeurl.find_one({"sno": x['sno']}, {'url': 1 , '_id': 0})
                 oldurl = urll['url']
                 os.system(f"yt-dlp --get-url -f 18 {oldurl} >> vurl.txt")
