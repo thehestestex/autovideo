@@ -32,3 +32,4 @@ def videourl():
                 os.system("rm vurl.txt")
                 conp.attack.sumayaacademy.update_one({"sr": x['sno']}, {'$set': {"vurl": newurl}})
             print("done")
+videourl()
